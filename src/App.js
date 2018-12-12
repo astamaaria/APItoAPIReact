@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {GetLainsaadantoData} from './serviceClient';
-import Histogram from './Components/Histogram';
-import Donut from './Components/Donut';
+import Histogram from './PresentationalComponents/Histogram';
+import Donut from './PresentationalComponents/Donut';
 
 var dataFromAPI=[];
 
@@ -10,11 +10,9 @@ class App extends Component {
     super (props);
     this.state={};
   }
-  /* Siivoa! */
+ 
   UpdateState = data =>{
     dataFromAPI = data;
-    console.log(data[0].length)
-    console.log(data);
     console.log(dataFromAPI);
     this.setState(this.state);
   }

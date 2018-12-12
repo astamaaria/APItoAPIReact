@@ -17,6 +17,7 @@ const Donut = (props) =>{
                         {angle: 3},
                         {angle: 1}
                         ]}
+                padAngle={0.03}
             />
         </Fragment>
     )
