@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {GetLainsaadantoData} from './serviceClient';
 import Histogram from './PresentationalComponents/Histogram';
-import Donut from './PresentationalComponents/Donut';
+import DonutManager from './ContainerComponents/DonutManager';
 
 var dataFromAPI=[];
 
@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div>
         <Histogram data={dataFromAPI}/>
-        <Donut data = {dataFromAPI}/>
+        <DonutManager data={dataFromAPI}/>
       </div>
     );
   }
