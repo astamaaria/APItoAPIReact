@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Donut from '../PresentationalComponents/Donut';
+import {Button} from 'react-bootstrap';
 
 
 class DonutManager extends Component {
@@ -7,23 +8,23 @@ class DonutManager extends Component {
     render(){
         console.log("Keskusta")
         this.donutList=[];
-        console.log(this.props.data)
+        
         if(this.props.data.length >0){
             let partieFlatList = this.props.data.reduce(function(a,b) {return a.concat(b);});
-            let Keskusta = partieFlatList.filter(function(item) {return item.vastuuministeri.party===0});   
-            let Kokoomus = partieFlatList.filter(function(item) {return item.vastuuministeri.party===1});
-            let Siniset = partieFlatList.filter(function(item) {return item.vastuuministeri.party===2});
-            let partiesTotal = [{angle: Keskusta.length}, {angle:Kokoomus.length}, {angle: Siniset.length}]
-            
-            this.donutList =(
-                <Donut data ={partiesTotal}/>
-            );
+            let partiesTotal = []
+            for(let i =0; i<3; i++){
+                partiesTotal.push({angle: partieFlatList.filter(function(item) {return item.vastuuministeri.party===i}).length})
+            }
+            this.donutList =([
+                <Donut data ={partiesTotal} key={"key1"}/>
+            ]);
 
         }
 
         return(
             <div>
                 {this.donutList}
+                
             </div>
         );
     }

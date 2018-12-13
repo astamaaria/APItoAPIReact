@@ -3,9 +3,9 @@ import {XYPlot,XAxis, HorizontalGridLines, VerticalBarSeries} from 'react-vis';
 
 const Histogram = (props) =>{
      /* Siivoa! */
-    var koordinaattiLista=[];
+    const koordinaattiLista=[];
     
-    for(var i=1; i < props.data.length; i++){
+    for(let i=1; i < props.data.length; i++){
         console.dir(props.data[i])
         /* console.log(props.data[i][0].vastuuministeri) */
         koordinaattiLista.unshift({x: i, y: props.data[i].length})
