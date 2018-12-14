@@ -27,9 +27,9 @@ class App extends Component {
       <Fragment>
         <Navigation/>
         <Grid>
-        <Histogram data={dataFromAPI}/>
-        <DonutManager data={dataFromAPI}/>
-      </Grid>
+          <Histogram data={dataFromAPI}/>
+          <DonutManager data={dataFromAPI}/>
+        </Grid>
       </Fragment>
     );
   }

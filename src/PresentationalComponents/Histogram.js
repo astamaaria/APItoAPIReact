@@ -1,49 +1,35 @@
 import React from 'react';
-import {XYPlot,XAxis, HorizontalGridLines, VerticalBarSeries} from 'react-vis';
+import {XYPlot,XAxis,YAxis, HorizontalGridLines, VerticalBarSeries} from 'react-vis';
 import './Histogram.css'
+import {Jumbotron} from 'react-bootstrap';
 
 const Histogram = (props) =>{
-     /* Siivoa! */
     const koordinaattiLista=[];
     
     for(let i=0; i < props.data.length; i++){
-        console.log(props.data[i][0])
         koordinaattiLista.unshift({x: props.data[i][0].vastuuministeri.lastName, y: props.data[i].length})
     }
 
-    return(<XYPlot
-        xType="ordinal"
-
-        width={1000}
-        height={300}>
-        <HorizontalGridLines />
-        <VerticalBarSeries
-        data={koordinaattiLista}
-        />
-        <XAxis />
-    </XYPlot>);
-}
-
-/* class Histogram extends Component { */
-     /* Siivoa! */
-    /* render (){ */
-        
-       /* this.props.data.forEach(element => {
-            console.log(element);
-        }); */
-        /* return(
+    return(
+        <div>
             <XYPlot
-                width={800}
+                xType="ordinal"
+                className="rotationalText"
+                width={1000}
                 height={300}>
                 <HorizontalGridLines />
-                <VerticalBarSeries
+                <VerticalBarSeries 
                 data={koordinaattiLista}
                 />
+                <YAxis/>
                 <XAxis />
             </XYPlot>
-        );
-    }
-
-} */
+            <Jumbotron className="Jumbotron">
+                <h3>Käynnissä olevat lakihankkeet per ministeri</h3>
+                <p>Lakihankkeita käynnissä ilman nimettyä vastuuministeriä: {}</p>
+            </Jumbotron>
+            
+        </div>);
+}
 
 export default Histogram;

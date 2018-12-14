@@ -1,4 +1,8 @@
-text{
-    transform:rotate(20deg) !important;
+.rotationalText text{
+    transform:rotate(20deg) translate(0px, 16px)  !important;
     
+}
+.Jumbotron {
+    margin-top: 10px;
+    text-align: center;
 }
