@@ -9,5 +9,6 @@ Valitsin datan hakemiseen kirjastoksi <a  target="_blank" rel="noopener noreferr
 ## Tulevaisuudessa
 
 - Testien lisääminen
-- Uusia toiminnallisuuksia, kuten pelkkien lakihankkeiden esittämisen sijaan, voitaisiin esittää myös strategiat ja muut hankkeet.
+- Ulkoasun siistiminen
+- Uusia toiminnallisuuksia, esim. pelkkien lakihankkeiden esittämisen sijaan, voitaisiin esittää tietoa myös strategioista ja muista hankkeista.
 - Sovelluksen siirto Azureen 
