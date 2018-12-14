@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {GetLainsaadantoData} from './serviceClient';
 import Histogram from './PresentationalComponents/Histogram';
 import DonutManager from './ContainerComponents/DonutManager';
+import {Grid} from 'react-bootstrap';
+import Navigation from './PresentationalComponents/Navigation';
 
 var dataFromAPI=[];
 
@@ -22,10 +24,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
+        <Navigation/>
+        <Grid>
         <Histogram data={dataFromAPI}/>
         <DonutManager data={dataFromAPI}/>
-      </div>
+      </Grid>
+      </Fragment>
     );
   }
 }

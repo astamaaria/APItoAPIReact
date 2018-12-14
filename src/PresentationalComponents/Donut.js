@@ -12,6 +12,7 @@ const Donut = (props) =>{
                 radius={140}
                     data={props.data}
                 padAngle={0.03}
+                showLabels={true}
             />
         </Fragment>
     )
